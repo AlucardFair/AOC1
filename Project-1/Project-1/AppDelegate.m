@@ -28,10 +28,12 @@
     
     // Call exact Float //
     NSLog(@"tempNum = %f", tempNum);
-    // Call Float with Cast //
-    NSLog(@"tempNum = %f", tempNum);
+    // Call Float (Truncated) //
+    NSLog(@"tempNum = %d", (int)tempNum);
     // Call Float with Set Decimal Point //
     NSLog(@"tempNum = %.1f", tempNum);
+    // Call Int with Cast Float //
+    NSLog(@"tempRound = %f", (float)tempRound);
     
     // And Or Comparison //
     if ((tempNum == 100.1) && (tempHot == YES))
