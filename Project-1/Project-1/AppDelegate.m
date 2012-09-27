@@ -46,6 +46,12 @@
         NSLog(@"It is not very warm today");
     }
     
+    // For Loop //
+    for (int x=0; x<=100; x++)
+    {
+        NSLog(@"x = %d", x);
+    }
+    
     return YES;
 }
 
