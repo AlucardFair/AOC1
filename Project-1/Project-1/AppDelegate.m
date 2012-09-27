@@ -17,6 +17,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    // Set Variables //
     // Set Float //
     float tempNum = 95.5f;
     // Set Int //
@@ -67,6 +68,15 @@
     else
     {
         NSLog(@"There is nothing here to count.");
+    }
+    
+    // While Loop with Increments //
+    while (tempRound < 200)
+    {
+        NSLog(@"tempRound = %d", tempRound);
+        
+        // Increment Value of tempRound //
+        tempRound++;
     }
     
     return YES;
