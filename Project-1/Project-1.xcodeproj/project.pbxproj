@@ -12,12 +12,12 @@
 		3140566416127DFA006EC70A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3140566316127DFA006EC70A /* CoreGraphics.framework */; };
 		3140566A16127DFA006EC70A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3140566816127DFA006EC70A /* InfoPlist.strings */; };
 		3140566C16127DFA006EC70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3140566B16127DFA006EC70A /* main.m */; };
-		3140567016127DFA006EC70A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3140566F16127DFA006EC70A /* AppDelegate.m */; };
 		3140567816127DFA006EC70A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3140567716127DFA006EC70A /* SenTestingKit.framework */; };
 		3140567916127DFA006EC70A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3140565F16127DFA006EC70A /* UIKit.framework */; };
 		3140567A16127DFA006EC70A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3140566116127DFA006EC70A /* Foundation.framework */; };
 		3140568216127DFA006EC70A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3140568016127DFA006EC70A /* InfoPlist.strings */; };
 		3140568516127DFA006EC70A /* Project_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3140568416127DFA006EC70A /* Project_1Tests.m */; };
+		31DA95F416137D81004A9C54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3140566F16127DFA006EC70A /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3140566C16127DFA006EC70A /* main.m in Sources */,
-				3140567016127DFA006EC70A /* AppDelegate.m in Sources */,
+				31DA95F416137D81004A9C54 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +418,7 @@
 				3140568A16127DFA006EC70A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3140568B16127DFA006EC70A /* Build configuration list for PBXNativeTarget "Project-1Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				3140568D16127DFA006EC70A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

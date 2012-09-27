@@ -16,6 +16,16 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // Set Float //
+    float tempNum = (int)95.5f;
+    // Call exact Float //
+    NSLog(@"tempNum = %f", tempNum);
+    // Call Float with Cast //
+    NSLog(@"tempNum = %f", tempNum);
+    // Call Float with Set Decimal Point //
+    NSLog(@"tempNum = %.1f", tempNum);
+    
     return YES;
 }
 
