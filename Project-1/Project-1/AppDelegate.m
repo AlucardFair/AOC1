@@ -18,13 +18,33 @@
     [self.window makeKeyAndVisible];
     
     // Set Float //
-    float tempNum = (int)95.5f;
+    float tempNum = 95.5f;
+    // Set Int //
+    int tempRound = 95;
+    // Set BOOL Values //
+    BOOL tempHot = YES;
+    BOOL tempCold = NO;
+    
     // Call exact Float //
     NSLog(@"tempNum = %f", tempNum);
     // Call Float with Cast //
     NSLog(@"tempNum = %f", tempNum);
     // Call Float with Set Decimal Point //
     NSLog(@"tempNum = %.1f", tempNum);
+    
+    // And Or Comparison //
+    if ((tempNum == 100.1) && (tempHot == YES))
+    {
+        NSLog(@"It is a very hot day today.");
+    }
+    else if ((tempRound == 95) || (tempCold == NO))
+    {
+        NSLog(@"It is warm, but not cold,");
+    }
+    else
+    {
+        NSLog(@"It is not very warm today");
+    }
     
     return YES;
 }
