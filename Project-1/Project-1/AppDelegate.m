@@ -52,6 +52,23 @@
         NSLog(@"x = %d", x);
     }
     
+    // Nested Loop Inside Conditional (if else) //
+    if (tempRound == 95)
+    {
+        for (int y=95; y>0; y--)
+        {
+            NSLog(@"tempRound = %d", y);
+        }
+    }
+    else if (tempRound == 96)
+    {
+        NSLog(@"That is too many to count.");
+    }
+    else
+    {
+        NSLog(@"There is nothing here to count.");
+    }
+    
     return YES;
 }
 
