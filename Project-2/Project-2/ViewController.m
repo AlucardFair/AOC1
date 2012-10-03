@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad
 {
+    // Change Background Color to Deep Sky Blue //
+    self.view.backgroundColor = [UIColor colorWithRed:(0.22) green:(0.675) blue:(0.925) alpha:(1)];
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
