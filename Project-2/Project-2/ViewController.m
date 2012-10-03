@@ -80,6 +80,18 @@
     // Call Published Date Label //
     [self.view addSubview:(publishedDateLabel)];
     
+    // Summary Label //
+    UILabel *summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 150, 20)];
+    if (summaryLabel != nil)
+    {
+        summaryLabel.text = @"Summary: ";
+        summaryLabel.textAlignment = UITextAlignmentRight;
+        summaryLabel.textColor = [UIColor blueColor];
+        summaryLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+    }
+    // Call Summary Label //
+    [self.view addSubview:(summaryLabel)];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
