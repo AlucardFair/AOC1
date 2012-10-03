@@ -21,7 +21,7 @@
     
     // Set Labels //
     // Book Label //
-    UILabel *bookLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 255, 20)];
+    UILabel *bookLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 150, 20)];
     if (bookLabel != nil)
     {
         bookLabel.text = @"Digital Fortress";
@@ -31,6 +31,18 @@
     }
     // Call Book Label //
     [self.view addSubview:(bookLabel)];
+    
+    // Auther (Text) Label //
+    UILabel *autherTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, 150, 20)];
+    if (autherTextLabel != nil)
+    {
+        autherTextLabel.text = @"Auther:";
+        autherTextLabel.textAlignment = UITextAlignmentRight;
+        autherTextLabel.textColor = [UIColor blueColor];
+        autherTextLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+    }
+    // Call Auther (Text) Label //
+    [self.view addSubview:(autherTextLabel)];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
