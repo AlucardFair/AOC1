@@ -65,8 +65,20 @@
         publishedLabel.textColor = [UIColor blueColor];
         publishedLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
-    // Call Auther Label //
+    // Call Published Label //
     [self.view addSubview:(publishedLabel)];
+    
+    // Published Date Label //
+    UILabel *publishedDateLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 70, 250, 20)];
+    if (publishedDateLabel != nil)
+    {
+        publishedDateLabel.text = @"May 2000 / January 2004";
+        publishedDateLabel.textAlignment = UITextAlignmentLeft;
+        publishedDateLabel.textColor = [UIColor blueColor];
+        publishedDateLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+    }
+    // Call Published Date Label //
+    [self.view addSubview:(publishedDateLabel)];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
