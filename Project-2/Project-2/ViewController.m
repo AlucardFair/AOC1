@@ -36,13 +36,25 @@
     UILabel *autherTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, 150, 20)];
     if (autherTextLabel != nil)
     {
-        autherTextLabel.text = @"Auther:";
+        autherTextLabel.text = @"Auther: ";
         autherTextLabel.textAlignment = UITextAlignmentRight;
         autherTextLabel.textColor = [UIColor blueColor];
         autherTextLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
     // Call Auther (Text) Label //
     [self.view addSubview:(autherTextLabel)];
+    
+    // Auther Label //
+    UILabel *autherLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 40, 150, 20)];
+    if (autherLabel != nil)
+    {
+        autherLabel.text = @"Dan Brown";
+        autherLabel.textAlignment = UITextAlignmentLeft;
+        autherLabel.textColor = [UIColor blueColor];
+        autherLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+    }
+    // Call Auther Label //
+    [self.view addSubview:(autherLabel)];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
