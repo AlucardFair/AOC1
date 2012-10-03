@@ -92,6 +92,18 @@
     // Call Summary Label //
     [self.view addSubview:(summaryLabel)];
     
+    // Summary Field Label //
+    UILabel *summaryFieldLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 100, 350, 20)];
+    if (summaryFieldLabel != nil)
+    {
+        summaryFieldLabel.text = @"";
+        summaryFieldLabel.textAlignment = UITextAlignmentRight;
+        summaryFieldLabel.textColor = [UIColor blueColor];
+        summaryFieldLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+    }
+    // Call Summary Field Label //
+    [self.view addSubview:(summaryFieldLabel)];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
