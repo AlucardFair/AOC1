@@ -18,7 +18,20 @@
 {
     // Change Background Color to Deep Sky Blue //
     self.view.backgroundColor = [UIColor colorWithRed:(0.22) green:(0.675) blue:(0.925) alpha:(1)];
-
+    
+    // Set Labels //
+    // Book Label //
+    UILabel *bookLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 255, 20)];
+    if (bookLabel != nil)
+    {
+        bookLabel.text = @"Digital Fortress";
+        bookLabel.textAlignment = UITextAlignmentCenter;
+        bookLabel.textColor = [UIColor blueColor];
+        bookLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+    }
+    // Call Book Label //
+    [self.view addSubview:(bookLabel)];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
