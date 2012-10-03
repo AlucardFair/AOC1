@@ -56,6 +56,18 @@
     // Call Auther Label //
     [self.view addSubview:(autherLabel)];
     
+    // Published Label //
+    UILabel *publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 150, 20)];
+    if (publishedLabel != nil)
+    {
+        publishedLabel.text = @"Published: ";
+        publishedLabel.textAlignment = UITextAlignmentRight;
+        publishedLabel.textColor = [UIColor blueColor];
+        publishedLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+    }
+    // Call Auther Label //
+    [self.view addSubview:(publishedLabel)];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
