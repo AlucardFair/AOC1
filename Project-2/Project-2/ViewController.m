@@ -16,12 +16,15 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    
     // Change Background Color to Deep Sky Blue //
     self.view.backgroundColor = [UIColor colorWithRed:(0.22) green:(0.675) blue:(0.925) alpha:(1)];
     
     // Set Labels //
     // Book Label //
-    UILabel *bookLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 150, 20)];
+    UILabel *bookLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 10, 150, 20)];
     if (bookLabel != nil)
     {
         bookLabel.text = @"Digital Fortress";
@@ -105,8 +108,63 @@
     // Call Summary Field Label //
     [self.view addSubview:(summaryFieldLabel)];
     
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Image Label //
+    UILabel *imageLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 310, 150, 20)];
+    if (imageLabel != nil)
+    {
+        imageLabel.text = @"Book Cover: ";
+        imageLabel.textAlignment = UITextAlignmentRight;
+        imageLabel.textColor = [UIColor blueColor];
+        imageLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+    }
+    // Call Image Label //
+    [self.view addSubview:(imageLabel)];
+    
+    // Image View //
+    UIImageView *bookImage = [[UIImageView  alloc] initWithImage:[UIImage imageNamed:@"digitalFortress.jpg"]];
+    if (bookImage != nil)
+    {
+        // Set Image Frame and Position //
+        bookImage.frame = CGRectMake(170, 310, 270, 400);
+    }
+    // Call Image View //
+    [self.view addSubview:(bookImage)];
+    
+    // List of Items (Text) Label //
+    UILabel *listOfItemsTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 720, 100, 20)];
+    if (listOfItemsTextLabel != nil)
+    {
+        listOfItemsTextLabel.text = @"List of Items:";
+        listOfItemsTextLabel.textAlignment = UITextAlignmentLeft;
+        listOfItemsTextLabel.textColor = [UIColor blueColor];
+        listOfItemsTextLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+    }
+    // Call Summary Field Label //
+    [self.view addSubview:(listOfItemsTextLabel)];
+    
+    // List of Items Label //
+    UILabel *listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 750, 150, 100)];
+    if (listOfItemsLabel != nil)
+    {
+        listOfItemsLabel.text = @"";
+        listOfItemsLabel.textAlignment = UITextAlignmentCenter;
+        listOfItemsLabel.textColor = [UIColor blueColor];
+        listOfItemsLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
+        listOfItemsLabel.numberOfLines = 5;
+    }
+    // Call Summary Field Label //
+    [self.view addSubview:(listOfItemsLabel)];
+    
+    // Create NSArray //
+    NSArray *loiArray = [[NSArray alloc] initWithObjects:@"Programmer", @"Hacker", @"Security", @"Code", @"Agent", nil];
+    for (int i=0; i<[loiArray count]; i++)
+    {
+        // Create a Mutable Array //
+        NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:(5)];
+        // Append the NSArray to the NSMutableArray //
+        mutableArray = [loiArray objectAtIndex:i];
+    }
+    
 }
 
 - (void)viewDidUnload
