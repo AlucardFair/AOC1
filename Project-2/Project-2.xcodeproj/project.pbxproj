@@ -20,6 +20,7 @@
 		31E5EC08161CBAE8007D8FA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E5EBE9161CBAE8007D8FA4 /* Foundation.framework */; };
 		31E5EC10161CBAE8007D8FA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31E5EC0E161CBAE8007D8FA4 /* InfoPlist.strings */; };
 		31E5EC13161CBAE8007D8FA4 /* Project_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5EC12161CBAE8007D8FA4 /* Project_2Tests.m */; };
+		31E9A38A161DCA3600DE81AA /* digitalFortress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31E9A389161DCA3600DE81AA /* digitalFortress.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		31E5EC0F161CBAE8007D8FA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		31E5EC11161CBAE8007D8FA4 /* Project_2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project_2Tests.h; sourceTree = "<group>"; };
 		31E5EC12161CBAE8007D8FA4 /* Project_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_2Tests.m; sourceTree = "<group>"; };
+		31E9A389161DCA3600DE81AA /* digitalFortress.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = digitalFortress.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		31E5EBEE161CBAE8007D8FA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				31E9A389161DCA3600DE81AA /* digitalFortress.jpg */,
 				31E5EBEF161CBAE8007D8FA4 /* Project-2-Info.plist */,
 				31E5EBF0161CBAE8007D8FA4 /* InfoPlist.strings */,
 				31E5EBF3161CBAE8007D8FA4 /* main.m */,
@@ -224,6 +227,7 @@
 			files = (
 				31E5EBF2161CBAE8007D8FA4 /* InfoPlist.strings in Resources */,
 				31E5EBFB161CBAE8007D8FA4 /* MainStoryboard.storyboard in Resources */,
+				31E9A38A161DCA3600DE81AA /* digitalFortress.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +440,7 @@
 				31E5EC18161CBAE8007D8FA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31E5EC19161CBAE8007D8FA4 /* Build configuration list for PBXNativeTarget "Project-2Tests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +449,7 @@
 				31E5EC1B161CBAE8007D8FA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
