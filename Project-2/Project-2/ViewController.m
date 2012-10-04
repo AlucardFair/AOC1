@@ -32,8 +32,6 @@
         bookLabel.textColor = [UIColor blueColor];
         bookLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
-    // Call Book Label //
-    [self.view addSubview:(bookLabel)];
     
     // Auther (Text) Label //
     UILabel *autherTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, 150, 20)];
@@ -44,8 +42,6 @@
         autherTextLabel.textColor = [UIColor blueColor];
         autherTextLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
-    // Call Auther (Text) Label //
-    [self.view addSubview:(autherTextLabel)];
     
     // Auther Label //
     UILabel *autherLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 40, 150, 20)];
@@ -56,8 +52,6 @@
         autherLabel.textColor = [UIColor blueColor];
         autherLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
-    // Call Auther Label //
-    [self.view addSubview:(autherLabel)];
     
     // Published Label //
     UILabel *publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 150, 20)];
@@ -68,8 +62,6 @@
         publishedLabel.textColor = [UIColor blueColor];
         publishedLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
-    // Call Published Label //
-    [self.view addSubview:(publishedLabel)];
     
     // Published Date Label //
     UILabel *publishedDateLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 70, 250, 20)];
@@ -80,8 +72,6 @@
         publishedDateLabel.textColor = [UIColor blueColor];
         publishedDateLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
-    // Call Published Date Label //
-    [self.view addSubview:(publishedDateLabel)];
     
     // Summary Label //
     UILabel *summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 150, 20)];
@@ -92,8 +82,6 @@
         summaryLabel.textColor = [UIColor blueColor];
         summaryLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
-    // Call Summary Label //
-    [self.view addSubview:(summaryLabel)];
     
     // Summary Field Label //
     UILabel *summaryFieldLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 100, 350, 200)];
@@ -105,8 +93,6 @@
         summaryFieldLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
         summaryFieldLabel.numberOfLines = 12;
     }
-    // Call Summary Field Label //
-    [self.view addSubview:(summaryFieldLabel)];
     
     // Image Label //
     UILabel *imageLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 310, 150, 20)];
@@ -117,8 +103,6 @@
         imageLabel.textColor = [UIColor blueColor];
         imageLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
-    // Call Image Label //
-    [self.view addSubview:(imageLabel)];
     
     // Image View //
     UIImageView *bookImage = [[UIImageView  alloc] initWithImage:[UIImage imageNamed:@"digitalFortress.jpg"]];
@@ -127,8 +111,6 @@
         // Set Image Frame and Position //
         bookImage.frame = CGRectMake(170, 310, 270, 400);
     }
-    // Call Image View //
-    [self.view addSubview:(bookImage)];
     
     // List of Items (Text) Label //
     UILabel *listOfItemsTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 720, 100, 20)];
@@ -139,8 +121,6 @@
         listOfItemsTextLabel.textColor = [UIColor blueColor];
         listOfItemsTextLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
-    // Call Summary Field Label //
-    [self.view addSubview:(listOfItemsTextLabel)];
     
     // List of Items Label //
     UILabel *listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 750, 150, 100)];
@@ -152,8 +132,6 @@
         listOfItemsLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
         listOfItemsLabel.numberOfLines = 5;
     }
-    // Call Summary Field Label //
-    [self.view addSubview:(listOfItemsLabel)];
     
     // Create NSArray //
     NSArray *loiArray = [[NSArray alloc] initWithObjects:@"Programmer", @"Hacker", @"Security", @"Code", @"Agent", nil];
@@ -164,6 +142,30 @@
         // Append the NSArray to the NSMutableArray //
         mutableArray = [loiArray objectAtIndex:i];
     }
+    
+    // Call addSubView //
+    // Call Auther (Text) Label //
+    [self.view addSubview:(autherTextLabel)];
+    // Call Book Label //
+    [self.view addSubview:(bookLabel)];
+    // Call Auther Label //
+    [self.view addSubview:(autherLabel)];
+    // Call Published Label //
+    [self.view addSubview:(publishedLabel)];
+    // Call Published Date Label //
+    [self.view addSubview:(publishedDateLabel)];
+    // Call Summary Label //
+    [self.view addSubview:(summaryLabel)];
+    // Call Summary Field Label //
+    [self.view addSubview:(summaryFieldLabel)];
+    // Call Image Label //
+    [self.view addSubview:(imageLabel)];
+    // Call Image View //
+    [self.view addSubview:(bookImage)];
+    // Call Summary Field Label //
+    [self.view addSubview:(listOfItemsTextLabel)];
+    // Call Summary Field Label //
+    [self.view addSubview:(listOfItemsLabel)];
     
 }
 
