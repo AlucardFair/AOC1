@@ -122,25 +122,25 @@
         listOfItemsTextLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
     }
     
+    // Create NSArray //
+    NSArray *loiArray = [[NSArray alloc] initWithObjects:@"Programming", @"Cryptography", @"Security", @"Code", @"Secrecy", nil];
+    // Create a Mutable Array //
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:(5)];
+    for (int i=0; i<[loiArray count]; i++)
+    {
+        // Append the NSArray to the NSMutableArray //
+        mutableArray = [loiArray objectAtIndex:i];
+    }
+    
     // List of Items Label //
     UILabel *listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 750, 150, 100)];
     if (listOfItemsLabel != nil)
     {
-        listOfItemsLabel.text = @"";
+        listOfItemsLabel.text = mutableArray;
         listOfItemsLabel.textAlignment = UITextAlignmentCenter;
         listOfItemsLabel.textColor = [UIColor blueColor];
         listOfItemsLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
         listOfItemsLabel.numberOfLines = 5;
-    }
-    
-    // Create NSArray //
-    NSArray *loiArray = [[NSArray alloc] initWithObjects:@"Programmer", @"Hacker", @"Security", @"Code", @"Agent", nil];
-    for (int i=0; i<[loiArray count]; i++)
-    {
-        // Create a Mutable Array //
-        NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:(5)];
-        // Append the NSArray to the NSMutableArray //
-        mutableArray = [loiArray objectAtIndex:i];
     }
     
     // Call addSubView //
