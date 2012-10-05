@@ -126,11 +126,14 @@
     NSArray *loiArray = [[NSArray alloc] initWithObjects:@"Programming", @"Cryptography", @"Security", @"Code", @"Secrecy", nil];
     // Create a Mutable Array //
     NSMutableString *mutableString = [[NSMutableString alloc] init];
+    NSMutableString *secondMutableString = [[NSMutableString alloc] init];
     for (int i=0; i<[loiArray count]; i++)
     {
-        // Append the NSArray to the NSMutableArray //
-        mutableString = [loiArray objectAtIndex:i];
-        NSLog(mutableString);
+        // Append the NSArray to the NSMutableString(secondMutableString) //
+        secondMutableString = [loiArray objectAtIndex:i];
+        
+        // Append the Index //
+        [mutableString appendString:secondMutableString];
     }
     
     
