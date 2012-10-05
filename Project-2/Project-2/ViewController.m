@@ -125,12 +125,12 @@
     // Create NSArray //
     NSArray *loiArray = [[NSArray alloc] initWithObjects:@"Programming", @"Cryptography", @"Security", @"Code", @"Secrecy", nil];
     // Create a Mutable Array //
-    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:(5)];
+    NSMutableString *mutableString = [[NSMutableString alloc] init];
     for (int i=0; i<[loiArray count]; i++)
     {
         // Append the NSArray to the NSMutableArray //
-        mutableArray = [loiArray objectAtIndex:i];
-        NSLog(mutableArray);
+        mutableString = [loiArray objectAtIndex:i];
+        NSLog(mutableString);
     }
     
     
@@ -138,7 +138,7 @@
     UILabel *listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 750, 150, 100)];
     if (listOfItemsLabel != nil)
     {
-        listOfItemsLabel.text = mutableArray;
+        listOfItemsLabel.text = mutableString;
         listOfItemsLabel.textAlignment = UITextAlignmentCenter;
         listOfItemsLabel.textColor = [UIColor blueColor];
         listOfItemsLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
