@@ -87,11 +87,11 @@
     UILabel *summaryFieldLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 100, 350, 200)];
     if (summaryFieldLabel != nil)
     {
-        summaryFieldLabel.text = @"";
+        summaryFieldLabel.text = @"The NSA discovers that they have intercepted a code that their tehnology cannot break. They call in their top cryptographer in to assist; only to find out that they are being held hostage by use of this crippling code. The best of the best must save the United States intelligence, the man she has found lov with and...the world.";
         summaryFieldLabel.textAlignment = UITextAlignmentCenter;
         summaryFieldLabel.textColor = [UIColor blueColor];
         summaryFieldLabel.backgroundColor = [UIColor colorWithRed:(0.851) green:(0.761) blue:(0.353) alpha:(1)];
-        summaryFieldLabel.numberOfLines = 12;
+        summaryFieldLabel.numberOfLines = 8;
     }
     
     // Image Label //
