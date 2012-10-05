@@ -135,16 +135,17 @@
         // Check the Index and Append a Comma //
         if (i>0)
         {
-            [mutableString appendString:@","];
+            [mutableString appendString:@", "];
         }
         
         // Append the Index //
         [mutableString appendString:secondMutableString];
+        
     }
     
     
     // List of Items Label //
-    UILabel *listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 750, 150, 100)];
+    UILabel *listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 750, 110, 110)];
     if (listOfItemsLabel != nil)
     {
         listOfItemsLabel.text = mutableString;
