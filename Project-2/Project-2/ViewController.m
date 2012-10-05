@@ -130,7 +130,9 @@
     {
         // Append the NSArray to the NSMutableArray //
         mutableArray = [loiArray objectAtIndex:i];
+        NSLog(mutableArray);
     }
+    
     
     // List of Items Label //
     UILabel *listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(170, 750, 150, 100)];
