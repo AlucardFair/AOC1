@@ -132,6 +132,12 @@
         // Append the NSArray to the NSMutableString(secondMutableString) //
         secondMutableString = [loiArray objectAtIndex:i];
         
+        // Check the Index and Append a Comma //
+        if (i>0)
+        {
+            [mutableString appendString:@","];
+        }
+        
         // Append the Index //
         [mutableString appendString:secondMutableString];
     }
