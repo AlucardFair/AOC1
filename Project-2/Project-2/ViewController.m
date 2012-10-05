@@ -141,6 +141,12 @@
         // Append the Index //
         [mutableString appendString:secondMutableString];
         
+        // Check the Index and if its the last one, Append a Period //
+        if (i==4)
+        {
+            [mutableString appendString:@"."];
+        }
+        
     }
     
     
