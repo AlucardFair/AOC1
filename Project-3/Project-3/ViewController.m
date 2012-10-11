@@ -15,7 +15,7 @@
  6) Call the Add function passing in two integer values. Capture the return of this function into a variable.
  7) Bundle the returned integer into an NSNumber and then convert it to a NSString and pass it to the DisplayAlertWithString function.
  ✓ 8) Give it some text for the title. The message will read, "The number is 00". Replace the 00 with the integer passed into the function.
- 9) Call the Compare function with two integer values. If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
+ ✓ 9) Call the Compare function with two integer values. If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
  */
 
 #import "ViewController.h"
@@ -89,10 +89,12 @@
     stringTwo = @"Two";
     NSMutableString *mutableString = [NSMutableString stringWithString:stringOne];
     [mutableString appendString:stringTwo];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Comparison" message:[NSString stringWithFormat:@"The first string is \"%@\". The second string is \"%@\". The mutable string is \"%@\".", stringOne, stringTwo, mutableString] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     // Check if *mutableString loads //
     if (mutableString != nil)
     {
         NSLog(@"%@", mutableString);
+        [alert show];
         return mutableString;
     }
 }
