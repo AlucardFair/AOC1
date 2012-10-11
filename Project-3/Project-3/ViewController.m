@@ -32,7 +32,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     [self addNSInt:(NSInteger *)1 plusInt:(NSInteger *)2];
-    [self compareInt:(NSInteger *)nil withInt:(NSInteger *)nil];
+    [self compareInt:(NSInteger *)0 withInt:(NSInteger *)0];
     [self appendString:@"" withString:@""];
     [self displayAlertWithString:@""];
 }
@@ -64,11 +64,13 @@
     // Local Variables //
     NSNumber *check1 = [NSNumber numberWithInt:3];
     NSNumber *check2 = [NSNumber numberWithInt:3];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Comparison" message:[NSString stringWithFormat:@"The first number is %d. The second number is %d. Yes, the numbers are the same.", (int)check1, (int)check2] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     // Check if the numbers are the same or not //
     if (check1 == check2)
     {
         // If they are the same, return YES //
         NSLog(@"Yes, the numbers are the same.");
+        [alert show];
         return YES;
     }
     else if (check1 != check2)
