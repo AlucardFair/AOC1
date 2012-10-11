@@ -10,9 +10,12 @@
 
 @interface ViewController : UIViewController
 {
-
+    int sum;
 }
 
 -(int)addNSInt:(NSInteger*)intOne plusInt:(NSInteger*)intTwo;
+-(BOOL)compareInt:(NSInteger*)checkOne withInt:(NSInteger*)checkTwo;
+-(NSString *)appendString:(NSString*)stringOne withString:(NSString*)stringTwo;
+-(UIAlertView*)displayAlertWithString:(NSString*)alertString;
 
 @end
