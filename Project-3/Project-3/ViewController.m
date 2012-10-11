@@ -77,7 +77,7 @@
     stringTwo = @"Two";
     NSMutableString *mutableString = [NSMutableString stringWithString:stringOne];
     [mutableString appendString:stringTwo];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Comparison" message:[NSString stringWithFormat:@"The first string is \"%@\". The second string is \"%@\". The mutable string is \"%@\".", stringOne, stringTwo, mutableString] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Appending Strings" message:[NSString stringWithFormat:@"The first string is \"%@\". The second string is \"%@\". The mutable string is \"%@\".", stringOne, stringTwo, mutableString] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     // Check if *mutableString loads //
     if (mutableString != nil)
     {
