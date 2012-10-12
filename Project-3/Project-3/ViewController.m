@@ -52,11 +52,13 @@
     // Local Variables //
     NSNumber *check1 = [NSNumber numberWithInt:3];
     NSNumber *check2 = [NSNumber numberWithInt:3];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Comparison" message:[NSString stringWithFormat:@"The first number is %d. The second number is %d. Yes, the numbers are the same.", (int)check1, (int)check2] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     // Check if the numbers are the same or not //
     if (check1 == check2)
     {
         // If they are the same, return YES //
         NSLog(@"Yes, the numbers are the same.");
+        [alert show];
         return YES;
     }
     else if (check1 != check2)
@@ -75,20 +77,24 @@
     stringTwo = @"Two";
     NSMutableString *mutableString = [NSMutableString stringWithString:stringOne];
     [mutableString appendString:stringTwo];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Appending Strings" message:[NSString stringWithFormat:@"The first string is \"%@\". The second string is \"%@\". The mutable string is \"%@\".", stringOne, stringTwo, mutableString] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     // Check if *mutableString loads //
     if (mutableString != nil)
     {
         NSLog(@"%@", mutableString);
+        [alert show];
         return mutableString;
     }
 }
 
+// Call Append and display in an UIAlertView //
+
 
 // Display Alert function //
--(UIAlertView*)displayAlertWithString:(NSString*)alertString displayTitle:(NSString*)titleString displayButton:(NSString*)btnString
+-(UIAlertView*)displayAlertWithString:(NSString*)alertString
 {
     // Local Variables //
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titleString message:alertString delegate:nil cancelButtonTitle:btnString otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"SUM" message:[NSString stringWithFormat:@"The number is %d", sum] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     // Check the Alert //
     if (alert != nil)
     {
