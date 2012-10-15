@@ -36,7 +36,7 @@
     */
     
     // Create a UILabel for the Username Text Field //
-    UILabel *userLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 13, 100, 25)];
+    userLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 13, 100, 25)];
     // Check to see the label has loaded //
     if (userLabel != nil)
     {
@@ -47,7 +47,7 @@
     }
     
     // Create a UITextField //
-    UITextField *userTextField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 200, 30)];
+    userTextField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 200, 30)];
     // Check to see if the text field has loaded //
     if (userTextField != nil)
     {
@@ -56,7 +56,7 @@
     }
     
     // Create a Button //
-    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     // Check to see if the button has loaded //
     if (loginButton != nil)
     {
@@ -69,7 +69,7 @@
     }
     
     // Create a UILabel to display "Please Enter Username" //
-    UILabel *directiveLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 90, 300, 30)];
+    directiveLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 90, 300, 30)];
     // Check to see if the label has loaded //
     if (directiveLabel != nil);
     {
@@ -100,7 +100,28 @@
 
 - (void)onClick
 {
-    
+    // Convert UILabel to NSString //
+    NSString *userInput = [userTextField text];
+    // Check the userTextField //
+    // If the field is empty, change the directiveLabel to "Username cannot be empty." //
+    if (userInput.length == 0)
+    {
+        directiveLabel.font = [UIFont systemFontOfSize:22.0f];
+        directiveLabel.textColor = [UIColor redColor];
+        directiveLabel.text = @"Username cannot be empty.";
+    }
+    // If the field has text entered, change the directiveLabel to "User: 'username' has been logged in." //
+    else if (userInput.length >= 1)
+    {
+        directiveLabel.font = [UIFont systemFontOfSize:22.0f];
+        directiveLabel.textColor = [UIColor whiteColor];
+        directiveLabel.text = [NSString stringWithFormat:@"User: %@ has been logged in.", userInput];
+        // Check the Username length, it is is more than 4 characters, change the font size //
+        if (userInput.length >= 4)
+        {
+            directiveLabel.font = [UIFont systemFontOfSize:18.0f];
+        }
+    }
 }
 
 - (void)viewDidUnload
