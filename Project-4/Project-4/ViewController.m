@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#define loginButtonTag 0
+
 @interface ViewController ()
 
 @end
@@ -19,10 +21,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    // Change the background color //
+    self.view.backgroundColor = [UIColor darkGrayColor];
+    
     /*
      Login
         ✓ 1) Create a UILabel near the top of your screen with teh text "Username:" in it.
-        2) Create a UITextField to the right of the username label
+        ✓ 2) Create a UITextField to the right of the username label
         3) Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
         4) Create another UILabel beneath with the default text "Please Enter Username".
         5) Add a target to the UIButton to call a function called onClick when the user presses the Login button.
@@ -30,13 +35,24 @@
         7) Hint: NSString has a property called length that tells you how many characters are in the string.
     */
     
-    // Create a UILable for the Username Text Field //
-    UILabel *userLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 25)];
+    // Create a UILabel for the Username Text Field //
+    UILabel *userLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 13, 100, 25)];
     // Check to see the label has loaded //
     if (userLabel != nil)
     {
+        userLabel.textColor = [UIColor whiteColor];
+        userLabel.backgroundColor = [UIColor darkGrayColor];
         [userLabel setText:@"Username: "];
         [self.view addSubview:userLabel];
+    }
+    
+    // Create a UITextField //
+    UITextField *userTextField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 190, 30)];
+    // Check to see if the text field has loaded //
+    if (userTextField != nil)
+    {
+        userTextField.borderStyle = UITextBorderStyleRoundedRect;
+        [self.view addSubview:userTextField];
     }
     
     /*
