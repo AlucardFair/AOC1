@@ -29,8 +29,8 @@
         ✓ 1) Create a UILabel near the top of your screen with teh text "Username:" in it.
         ✓ 2) Create a UITextField to the right of the username label
         ✓ 3) Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
-        4) Create another UILabel beneath with the default text "Please Enter Username".
-        5) Add a target to the UIButton to call a function called onClick when the user presses the Login button.
+        ✓ 4) Create another UILabel beneath with the default text "Please Enter Username".
+        ✓ 5) Add a target to the UIButton to call a function called onClick when the user presses the Login button.
         6) If the user has not entered any text into the UITextField, display in the UILabel, "Username cannot be empty". Otherwise, display "User: username has been logged in".
         7) Hint: NSString has a property called length that tells you how many characters are in the string.
     */
@@ -60,11 +60,25 @@
     // Check to see if the button has loaded //
     if (loginButton != nil)
     {
-        loginButton.frame = CGRectMake(220, 50, 80, 30);
+        loginButton.frame = CGRectMake(230, 50, 80, 30);
         [loginButton setTitle:@"LOGIN" forState:UIControlStateNormal];
+        [loginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         loginButton.tag = loginButtonTag;
         [loginButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:loginButton];
+    }
+    
+    // Create a UILabel to display "Please Enter Username" //
+    UILabel *directiveLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 90, 300, 30)];
+    // Check to see if the label has loaded //
+    if (directiveLabel != nil);
+    {
+        directiveLabel.text = @"Please Enter Username";
+        directiveLabel.textAlignment = UITextAlignmentCenter;
+        directiveLabel.font = [UIFont systemFontOfSize:26.0f];
+        directiveLabel.backgroundColor = [UIColor darkGrayColor];
+        directiveLabel.textColor = [UIColor whiteColor];
+        [self.view addSubview:directiveLabel];
     }
     
     /*
@@ -82,6 +96,11 @@
         3) Hook up an action to the info button to have it call the onClick handler you created earlier.
         4) When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
     */
+}
+
+- (void)onClick
+{
+    
 }
 
 - (void)viewDidUnload
