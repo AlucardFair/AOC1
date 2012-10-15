@@ -28,7 +28,7 @@
      Login
         ✓ 1) Create a UILabel near the top of your screen with teh text "Username:" in it.
         ✓ 2) Create a UITextField to the right of the username label
-        3) Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
+        ✓ 3) Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
         4) Create another UILabel beneath with the default text "Please Enter Username".
         5) Add a target to the UIButton to call a function called onClick when the user presses the Login button.
         6) If the user has not entered any text into the UITextField, display in the UILabel, "Username cannot be empty". Otherwise, display "User: username has been logged in".
@@ -47,12 +47,24 @@
     }
     
     // Create a UITextField //
-    UITextField *userTextField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 190, 30)];
+    UITextField *userTextField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 200, 30)];
     // Check to see if the text field has loaded //
     if (userTextField != nil)
     {
         userTextField.borderStyle = UITextBorderStyleRoundedRect;
         [self.view addSubview:userTextField];
+    }
+    
+    // Create a Button //
+    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    // Check to see if the button has loaded //
+    if (loginButton != nil)
+    {
+        loginButton.frame = CGRectMake(220, 50, 80, 30);
+        [loginButton setTitle:@"LOGIN" forState:UIControlStateNormal];
+        loginButton.tag = loginButtonTag;
+        [loginButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:loginButton];
     }
     
     /*
