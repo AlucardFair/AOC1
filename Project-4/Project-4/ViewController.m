@@ -110,7 +110,7 @@
      Information - this section will display the text "This application was created by: Firstname Lastname" in a label when the info button is clicked.
         ✓ 1) Create a UIButton using either the light or dark info type and position it somewhere near the bottom of the screen.
         ✓ 2) Create a UILabel beneath it that contains no initial text.
-        3) Hook up an action to the info button to have it call the onClick handler you created earlier.
+        ✓ 3) Hook up an action to the info button to have it call the onClick handler you created earlier.
         4) When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
     */
     
@@ -179,7 +179,18 @@
             }
         }
         break;
+        case infoButtonTag:
+        {
+            infoLabel.text = @"This application was created by: Zachery Hernandez";
+        }
         default:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"An error has occured." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+            if (alert != nil)
+            {
+                [alert show];
+            }
+        }
         break;
     }
 }
