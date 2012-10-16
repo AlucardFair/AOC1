@@ -139,7 +139,7 @@
     }
 }
 
-- (void)onClick:(UIButton*)buttons;
+- (void)onClick:(UIButton*)buttons
 {
     // Switch Case, to switch between button clicks //
     switch (buttons.tag)
