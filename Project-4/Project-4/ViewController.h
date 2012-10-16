@@ -16,6 +16,7 @@
     UILabel *directiveLabel;
     UIButton *dateButton;
     UIButton *infoButton;
+    UILabel *infoLabel;
 }
 
 - (void)onClick;

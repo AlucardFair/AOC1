@@ -109,7 +109,7 @@
     /*
      Information - this section will display the text "This application was created by: Firstname Lastname" in a label when the info button is clicked.
         ✓ 1) Create a UIButton using either the light or dark info type and position it somewhere near the bottom of the screen.
-        2) Create a UILabel beneath it that contains no initial text.
+        ✓ 2) Create a UILabel beneath it that contains no initial text.
         3) Hook up an action to the info button to have it call the onClick handler you created earlier.
         4) When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
     */
@@ -123,6 +123,19 @@
         infoButton.tag = infoButtonTag;
         [infoButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:infoButton];
+    }
+    
+    // Create a UILabel to display "" //
+    infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 410, 300, 30)];
+    // Check to see if the label has loaded //
+    if (infoLabel != nil);
+    {
+        infoLabel.text = @"";
+        infoLabel.textAlignment = UITextAlignmentCenter;
+        infoLabel.font = [UIFont systemFontOfSize:12.0f];
+        infoLabel.backgroundColor = [UIColor darkGrayColor];
+        infoLabel.textColor = [UIColor whiteColor];
+        [self.view addSubview:infoLabel];
     }
 }
 
