@@ -113,29 +113,48 @@
     */
 }
 
-- (void)onClick
+- (void)onClick:(UIButton*)buttons;
 {
-    // Convert UILabel to NSString //
-    NSString *userInput = [userTextField text];
-    // Check the userTextField //
-    // If the field is empty, change the directiveLabel to "Username cannot be empty." //
-    if (userInput.length == 0)
+    // Switch Case, to switch between button clicks //
+    switch (buttons.tag)
     {
-        directiveLabel.font = [UIFont systemFontOfSize:22.0f];
-        directiveLabel.textColor = [UIColor redColor];
-        directiveLabel.text = @"Username cannot be empty.";
-    }
-    // If the field has text entered, change the directiveLabel to "User: 'username' has been logged in." //
-    else if (userInput.length >= 1)
-    {
-        directiveLabel.font = [UIFont systemFontOfSize:22.0f];
-        directiveLabel.textColor = [UIColor whiteColor];
-        directiveLabel.text = [NSString stringWithFormat:@"User: %@ has been logged in.", userInput];
-        // Check the Username length, it is is more than 4 characters, change the font size //
-        if (userInput.length >= 4)
+        case loginButtonTag:
         {
-            directiveLabel.font = [UIFont systemFontOfSize:18.0f];
+            // Convert UILabel to NSString //
+            NSString *userInput = [userTextField text];
+            // Check the userTextField //
+            // If the field is empty, change the directiveLabel to "Username cannot be empty." //
+            if (userInput.length == 0)
+            {
+                directiveLabel.font = [UIFont systemFontOfSize:22.0f];
+                directiveLabel.textColor = [UIColor redColor];
+                directiveLabel.text = @"Username cannot be empty.";
+            }
+            // If the field has text entered, change the directiveLabel to "User: 'username' has been logged in." //
+            else if (userInput.length >= 1)
+            {
+                directiveLabel.font = [UIFont systemFontOfSize:22.0f];
+                directiveLabel.textColor = [UIColor whiteColor];
+                directiveLabel.text = [NSString stringWithFormat:@"User: %@ has been logged in.", userInput];
+                // Check the Username length, it is is more than 4 characters, change the font size //
+                if (userInput.length >= 4)
+                {
+                    directiveLabel.font = [UIFont systemFontOfSize:18.0f];
+                }
+            }
         }
+        break;
+        case dateButtonTag:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Test" message:@"Test" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+            if (alert != nil)
+            {
+                [alert show];
+            }
+        }
+        break;
+        default:
+        break;
     }
 }
 
