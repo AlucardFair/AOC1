@@ -14,6 +14,9 @@
     UITextField *userTextField;
     UIButton *loginButton;
     UILabel *directiveLabel;
+    UIButton *dateButton;
 }
+
+- (void)onClick;
 
 @end
