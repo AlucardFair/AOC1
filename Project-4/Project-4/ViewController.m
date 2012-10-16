@@ -12,6 +12,8 @@
 
 #define dateButtonTag 1
 
+#define infoButtonTag 2
+
 @interface ViewController ()
 
 @end
@@ -106,11 +108,22 @@
     
     /*
      Information - this section will display the text "This application was created by: Firstname Lastname" in a label when the info button is clicked.
-        1) Create a UIButton using either the light or dark info type and position it somewhere near the bottom of the screen.
+        ✓ 1) Create a UIButton using either the light or dark info type and position it somewhere near the bottom of the screen.
         2) Create a UILabel beneath it that contains no initial text.
         3) Hook up an action to the info button to have it call the onClick handler you created earlier.
         4) When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
     */
+    
+    // Create a Button (Date) //
+    infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    // Check to see if the button has loaded //
+    if (infoButton != nil)
+    {
+        infoButton.frame = CGRectMake(150, 380, 20, 20);
+        infoButton.tag = infoButtonTag;
+        [infoButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:infoButton];
+    }
 }
 
 - (void)onClick:(UIButton*)buttons;
