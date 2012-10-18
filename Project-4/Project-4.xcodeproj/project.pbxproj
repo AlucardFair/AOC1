@@ -21,6 +21,7 @@
 		312FCF4D162B611600C221BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 312FCF4B162B611600C221BA /* InfoPlist.strings */; };
 		312FCF50162B611600C221BA /* Project_4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 312FCF4F162B611600C221BA /* Project_4Tests.m */; };
 		3134C107162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3134C106162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg */; };
+		31DB71731630773E0044522F /* tiled_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DB71721630773E0044522F /* tiled_img.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		312FCF4E162B611600C221BA /* Project_4Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project_4Tests.h; sourceTree = "<group>"; };
 		312FCF4F162B611600C221BA /* Project_4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_4Tests.m; sourceTree = "<group>"; };
 		3134C106162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fso_aoc1_show_off.jpg; sourceTree = "<group>"; };
+		31DB71721630773E0044522F /* tiled_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiled_img.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		312FCF2B162B611600C221BA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				31DB71721630773E0044522F /* tiled_img.png */,
 				3134C106162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg */,
 				312FCF2C162B611600C221BA /* Project-4-Info.plist */,
 				312FCF2D162B611600C221BA /* InfoPlist.strings */,
@@ -228,6 +231,7 @@
 				312FCF2F162B611600C221BA /* InfoPlist.strings in Resources */,
 				312FCF38162B611600C221BA /* MainStoryboard.storyboard in Resources */,
 				3134C107162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg in Resources */,
+				31DB71731630773E0044522F /* tiled_img.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

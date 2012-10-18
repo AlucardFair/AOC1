@@ -22,6 +22,8 @@
     UIButton * imageButton;
 }
 
+- (void)alert:(NSString*)messageString;
+- (void)alertView:(UIAlertView*)alertView;
 - (void)onClick;
 
 @end

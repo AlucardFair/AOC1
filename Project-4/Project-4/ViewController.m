@@ -93,18 +93,6 @@
         [self.view addSubview:dateButton];
     }
     
-    // Create and Capture the date //
-    date = [NSDate date];
-    if (date != nil);
-    {
-        // Set a date format //
-        dateFormatter = [[NSDateFormatter alloc] init];
-        if (dateFormatter != nil)
-        {
-            [dateFormatter setDateFormat:@"EEE, MMM d, ''yy - h:mm a zzz"];
-        }
-    }
-    
 /*************************************** Info Section ***************************************/
     
     // Create a Button (Info) //
@@ -159,18 +147,27 @@
     }
 }
 
+// This calls on the UIAlertView with a delegate:self (to change the background image) //
 - (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    // This calls the original color button //
     if (buttonIndex == 0)
-    {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fso_aoc1_show_off.jpg"]];
-    }
-    else if (buttonIndex == 1)
     {
         self.view.backgroundColor = [UIColor darkGrayColor];
     }
+    // This calls the image to be the background //
+    else if (buttonIndex == 1)
+    {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fso_aoc1_show_off.jpg"]];
+    }
+    // This calls the smaller image to be tiled as the background //
+    else if (buttonIndex == 2)
+    {
+        [[self view] setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"tiled_img.png"]]];
+    }
 }
 
+// This function is what is being called during button presses //
 - (void)onClick:(UIButton*)buttons
 {
     // Switch Case, to switch between button clicks //
@@ -206,6 +203,18 @@
         // dateButton pressed //
         case dateButtonTag:
         {
+            // Create and Capture the date //
+            date = [NSDate date];
+            if (date != nil);
+            {
+                // Set a date format //
+                dateFormatter = [[NSDateFormatter alloc] init];
+                if (dateFormatter != nil)
+                {
+                    [dateFormatter setDateFormat:@"EEE, MMM d, ''yy - h:mm a zzz"];
+                }
+            }
+            
             // Grab captured date and time and display it as the message in a alert (alert) //
             [self alert:[dateFormatter stringFromDate:date] titleString:@"Today's Date and Time" buttonString:@"Okay"];
         }
@@ -221,7 +230,7 @@
         case imageButtonTag:
         {
             // This is it's own alert since it consists of more than one button //
-            UIAlertView *changeImage = [[UIAlertView alloc] initWithTitle:@"Time for some fun" message:@"What do you want to change the background to?" delegate:self cancelButtonTitle:@"Image" otherButtonTitles:@"Original Color", nil];
+            UIAlertView *changeImage = [[UIAlertView alloc] initWithTitle:@"Time for some fun" message:@"What do you want to change the background to?" delegate:self cancelButtonTitle:@"Original Color" otherButtonTitles:@"Image", @"Tiled Image", nil];
             if (changeImage != nil)
             {
                 [changeImage show];
