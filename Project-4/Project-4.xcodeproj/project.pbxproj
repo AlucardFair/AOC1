@@ -20,6 +20,7 @@
 		312FCF45162B611600C221BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312FCF26162B611600C221BA /* Foundation.framework */; };
 		312FCF4D162B611600C221BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 312FCF4B162B611600C221BA /* InfoPlist.strings */; };
 		312FCF50162B611600C221BA /* Project_4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 312FCF4F162B611600C221BA /* Project_4Tests.m */; };
+		3134C107162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3134C106162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		312FCF4C162B611600C221BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		312FCF4E162B611600C221BA /* Project_4Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project_4Tests.h; sourceTree = "<group>"; };
 		312FCF4F162B611600C221BA /* Project_4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_4Tests.m; sourceTree = "<group>"; };
+		3134C106162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fso_aoc1_show_off.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		312FCF2B162B611600C221BA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3134C106162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg */,
 				312FCF2C162B611600C221BA /* Project-4-Info.plist */,
 				312FCF2D162B611600C221BA /* InfoPlist.strings */,
 				312FCF30162B611600C221BA /* main.m */,
@@ -224,6 +227,7 @@
 			files = (
 				312FCF2F162B611600C221BA /* InfoPlist.strings in Resources */,
 				312FCF38162B611600C221BA /* MainStoryboard.storyboard in Resources */,
+				3134C107162F2EDC00B9F1C9 /* fso_aoc1_show_off.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +438,7 @@
 				312FCF55162B611600C221BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		312FCF56162B611600C221BA /* Build configuration list for PBXNativeTarget "Project-4Tests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +447,7 @@
 				312FCF58162B611600C221BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

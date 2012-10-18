@@ -14,6 +14,8 @@
 
 #define infoButtonTag 2
 
+#define imageButtonTag 3
+
 @interface ViewController ()
 
 @end
@@ -28,16 +30,7 @@
     // Change the background color //
     self.view.backgroundColor = [UIColor darkGrayColor];
     
-    /*
-     Login
-        ✓ 1) Create a UILabel near the top of your screen with teh text "Username:" in it.
-        ✓ 2) Create a UITextField to the right of the username label
-        ✓ 3) Create a rounded rectangle UIButton of any color under the UITextField with the text "Login" on it.
-        ✓ 4) Create another UILabel beneath with the default text "Please Enter Username".
-        ✓ 5) Add a target to the UIButton to call a function called onClick when the user presses the Login button.
-        ✓ 6) If the user has not entered any text into the UITextField, display in the UILabel, "Username cannot be empty". Otherwise, display "User: username has been logged in".
-        ✓ 7) Hint: NSString has a property called length that tells you how many characters are in the string.
-    */
+/*************************************** Login Section ***************************************/
     
     // Create a UILabel for the Username Text Field //
     userLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 13, 100, 25)];
@@ -45,7 +38,7 @@
     if (userLabel != nil)
     {
         userLabel.textColor = [UIColor whiteColor];
-        userLabel.backgroundColor = [UIColor darkGrayColor];
+        userLabel.backgroundColor = [UIColor colorWithRed:(0.0) green:(0.0) blue:(0.0) alpha:(0)];
         [userLabel setText:@"Username: "];
         [self.view addSubview:userLabel];
     }
@@ -68,7 +61,7 @@
         [loginButton setTitle:@"LOGIN" forState:UIControlStateNormal];
         [loginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         loginButton.tag = loginButtonTag;
-        [loginButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
+        [loginButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:loginButton];
     }
     
@@ -80,18 +73,12 @@
         directiveLabel.text = @"Please Enter Username";
         directiveLabel.textAlignment = UITextAlignmentCenter;
         directiveLabel.font = [UIFont systemFontOfSize:26.0f];
-        directiveLabel.backgroundColor = [UIColor darkGrayColor];
+        directiveLabel.backgroundColor = [UIColor colorWithRed:(0.0) green:(0.0) blue:(0.0) alpha:(0)];
         directiveLabel.textColor = [UIColor whiteColor];
         [self.view addSubview:directiveLabel];
     }
     
-    /*
-     Date - this section will display a UIAlertView with the current date and time in it using an NSDate object.
-        ✓ 1) Create a UIButton using the rounded rectangle type. Give this button any color you wish.
-        ✓ 2) Add the text "Show Date" to the button
-        ✓ 3) Add an action to the button that when clicked, it will call the same onClick handler you already defined. Make sure to add a tag to the date button so you know which one was pressed.
-        4) Display a UIAlertView with the current date and time displayed in the format seen in the dateAlert graphic in the assets section of this project assignment. You can either format the date and time manually or use the date and time styles. You must use an NSDate object to gather the date and time information.
-     */
+/*************************************** Date Section ***************************************/
     
     // Create a Button (Date) //
     dateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -102,26 +89,32 @@
         [dateButton setTitle:@"Show Date" forState:UIControlStateNormal];
         [dateButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         dateButton.tag = dateButtonTag;
-        [dateButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
+        [dateButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:dateButton];
     }
     
-    /*
-     Information - this section will display the text "This application was created by: Firstname Lastname" in a label when the info button is clicked.
-        ✓ 1) Create a UIButton using either the light or dark info type and position it somewhere near the bottom of the screen.
-        ✓ 2) Create a UILabel beneath it that contains no initial text.
-        ✓ 3) Hook up an action to the info button to have it call the onClick handler you created earlier.
-        4) When the button is pressed, have the text "This application was created by: Firstname Lastname" appear in the info UILabel. Please replace firstname lastname with your name.
-    */
+    // Create and Capture the date //
+    date = [NSDate date];
+    if (date != nil);
+    {
+        // Set a date format //
+        dateFormatter = [[NSDateFormatter alloc] init];
+        if (dateFormatter != nil)
+        {
+            [dateFormatter setDateFormat:@"EEE, MMM d, ''yy - h:mm a zzz"];
+        }
+    }
     
-    // Create a Button (Date) //
+/*************************************** Info Section ***************************************/
+    
+    // Create a Button (Info) //
     infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
     // Check to see if the button has loaded //
     if (infoButton != nil)
     {
         infoButton.frame = CGRectMake(150, 380, 20, 20);
         infoButton.tag = infoButtonTag;
-        [infoButton addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
+        [infoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:infoButton];
     }
     
@@ -133,9 +126,48 @@
         infoLabel.text = @"";
         infoLabel.textAlignment = UITextAlignmentCenter;
         infoLabel.font = [UIFont systemFontOfSize:12.0f];
-        infoLabel.backgroundColor = [UIColor darkGrayColor];
+        infoLabel.backgroundColor = [UIColor colorWithRed:(0.0) green:(0.0) blue:(0.0) alpha:(0)];
         infoLabel.textColor = [UIColor whiteColor];
         [self.view addSubview:infoLabel];
+    }
+    
+/*************************************** Having Fun Section ***************************************/
+    
+    // Create a Button (image) //
+    imageButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    // Check to see if the button has loaded //
+    if (imageButton != nil)
+    {
+        imageButton.frame = CGRectMake(150, 130, 160, 30);
+        [imageButton setTitle:@"Change Background" forState:UIControlStateNormal];
+        [imageButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        imageButton.tag = imageButtonTag;
+        [imageButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:imageButton];
+    }
+}
+
+/*************************************** Custom Functions ***************************************/
+
+// Generic alert function, this will be the foudation to all alerts needed  //
+- (void)alert:(NSString*)messageString titleString:(NSString*)titleString buttonString:(NSString*)buttonString;
+{
+    UIAlertView *messageAlert = [[UIAlertView alloc] initWithTitle:titleString message:messageString delegate:nil cancelButtonTitle:buttonString otherButtonTitles:nil, nil];
+    if (messageAlert != nil)
+    {
+        [messageAlert show];
+    }
+}
+
+- (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fso_aoc1_show_off.jpg"]];
+    }
+    else if (buttonIndex == 1)
+    {
+        self.view.backgroundColor = [UIColor darkGrayColor];
     }
 }
 
@@ -144,6 +176,7 @@
     // Switch Case, to switch between button clicks //
     switch (buttons.tag)
     {
+        // loginButton pressed //
         case loginButtonTag:
         {
             // Convert UILabel to NSString //
@@ -170,30 +203,41 @@
             }
         }
         break;
+        // dateButton pressed //
         case dateButtonTag:
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Test" message:@"Test" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
-            if (alert != nil)
+            // Grab captured date and time and display it as the message in a alert (alert) //
+            [self alert:[dateFormatter stringFromDate:date] titleString:@"Today's Date and Time" buttonString:@"Okay"];
+        }
+        break;
+        // infoButton pressed //
+        case infoButtonTag:
+        {
+            // Once the button is 'clicked' display this in place of the empty string above //
+            infoLabel.text = @"This application was created by: Zachery Hernandez";
+        }
+        break;
+        // This is part of the "Having Fun Section" //
+        case imageButtonTag:
+        {
+            // This is it's own alert since it consists of more than one button //
+            UIAlertView *changeImage = [[UIAlertView alloc] initWithTitle:@"Time for some fun" message:@"What do you want to change the background to?" delegate:self cancelButtonTitle:@"Image" otherButtonTitles:@"Original Color", nil];
+            if (changeImage != nil)
             {
-                [alert show];
+                [changeImage show];
             }
         }
         break;
-        case infoButtonTag:
-        {
-            infoLabel.text = @"This application was created by: Zachery Hernandez";
-        }
         default:
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"An error has occured." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
-            if (alert != nil)
-            {
-                [alert show];
-            }
+            // If all cases fail, load an error message (alert) //
+            [self alert:@"Oops!" titleString:@"An error has occured" buttonString:@"Okay"];
         }
         break;
     }
 }
+
+/*************************************** End ***************************************/
 
 - (void)viewDidUnload
 {

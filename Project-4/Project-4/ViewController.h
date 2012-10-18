@@ -15,8 +15,11 @@
     UIButton *loginButton;
     UILabel *directiveLabel;
     UIButton *dateButton;
+    NSDate *date;
+    NSDateFormatter *dateFormatter;
     UIButton *infoButton;
     UILabel *infoLabel;
+    UIButton * imageButton;
 }
 
 - (void)onClick;
